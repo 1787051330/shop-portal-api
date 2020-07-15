@@ -2,7 +2,7 @@
   <div>
   <el-card class="box-card">
     <div slot="header" class="clearfix">
-      <span>请选择收货地址</span>
+      <span>请选择收货地址123</span>
       <el-button style="float: right; padding: 3px 0" @click="toAddress()" type="text">添加地址</el-button>
     </div>
     <el-table
