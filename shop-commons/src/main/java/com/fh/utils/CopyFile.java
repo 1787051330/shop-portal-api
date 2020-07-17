@@ -75,7 +75,7 @@ public class CopyFile {
           String path = mkdirName+"/"+newName;
           ossClient.putObject(bucketName,path,new ByteArrayInputStream(bytes));
           //设置过期时间 -- 十年
-          Date expiration = new Date(new Date().getTime() + 3600l * 1000 * 24 * 365 * 10);
+          Date expiration = new Date(System.currentTimeMillis() + 3600L * 1000 * 24 * 365 * 10);
           //取出文件上传路径
           String url = ossClient.generatePresignedUrl(bucketName, path,expiration).toString();
           return url;
